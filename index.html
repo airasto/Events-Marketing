@@ -1,0 +1,364 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Pracovný list KORA</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Rasťo AI · Kit 1 (červený). Layout: jeden stĺpec na čítanie, lepkavá hlavička s piatimi sedeniami */
+  --bg:#FFFFFF; --surface:#F5F5F5; --tint:#FFF5F5; --fg:#333333; --heading:#111111; --muted:#54595F;
+  --line:#E4E4E4; --accent:#E60000; --accent-hover:#C80000; --mark:#FFF5F5; --on-accent:#FFFFFF;
+  --logo-l:block; --logo-d:none;
+  --font:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#111111; --surface:#1A1A1A; --tint:#222222; --fg:#FFFFFF; --heading:#FFFFFF; --muted:#CCCCCC;
+  --line:#222222; --mark:#222222; --logo-l:none; --logo-d:block; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#111111; --surface:#1A1A1A; --tint:#222222; --fg:#FFFFFF; --heading:#FFFFFF; --muted:#CCCCCC;
+  --line:#222222; --mark:#222222; --logo-l:none; --logo-d:block; color-scheme:dark }
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:15px;line-height:1.7;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:820px;margin:0 auto}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);margin:0 calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding:0 max(16px,env(safe-area-inset-left,0px))}
+.top .wrap{display:flex;flex-direction:column;gap:6px;padding-block:12px 0}
+.brand{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.logo{height:46px;width:auto;margin-left:-6px}
+.logo-l{display:var(--logo-l)} .logo-d{display:var(--logo-d)}
+.who{font-size:12px;color:var(--muted);text-align:right;line-height:1.5}
+.who b{color:var(--heading);font-weight:600}
+.pill{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--on-accent);background:var(--accent);padding:2px 8px;border-radius:3px;margin-bottom:2px}
+nav.tabs{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+nav.tabs::-webkit-scrollbar{display:none}
+nav.tabs a{flex:0 0 auto;display:flex;flex-direction:column;padding:8px 12px 10px;text-decoration:none;color:var(--muted);border-bottom:3px solid transparent;font-size:13px;line-height:1.35}
+nav.tabs a b{font-weight:700;color:var(--heading);font-size:13px}
+nav.tabs a span{font-size:12px}
+nav.tabs a.on{border-bottom-color:var(--accent)}
+nav.tabs a.on b{color:var(--accent)}
+nav.tabs a.pend b{color:var(--muted);font-weight:600}
+nav.tabs a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+main{padding-block:28px 48px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:0 0 6px}
+h1{font-size:clamp(28px,5vw,40px);font-weight:800;line-height:1.15;letter-spacing:-1px;color:var(--heading);margin:0 0 10px;text-wrap:balance}
+.meta{display:flex;flex-wrap:wrap;gap:4px 18px;font-size:13px;color:var(--muted);margin:0 0 24px;padding-bottom:18px;border-bottom:2px solid var(--heading)}
+.meta b{color:var(--heading);font-weight:600}
+h2{font-size:22px;font-weight:700;line-height:1.3;color:var(--heading);margin:0;text-wrap:balance}
+h3{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:20px 0 6px}
+.lab{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+p{margin:0 0 10px}
+ul,ol{margin:0;padding-left:22px} li{margin:4px 0}
+.overview{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-bottom:18px}
+.overview > *{min-width:0}
+.card{background:var(--surface);border-radius:6px;padding:16px 18px}
+.card.tint{background:var(--tint)}
+.card p:last-child{margin:0}
+.how{font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 20px;margin:0 0 26px;padding:0;list-style:none}
+.how li{margin:0;padding-left:14px;position:relative}
+.how li::before{content:"";position:absolute;left:0;top:.75em;width:6px;height:6px;background:var(--accent);border-radius:50%}
+.info{border:1px solid var(--line);border-radius:6px;padding:16px 18px;margin:0 0 8px}
+.info h2{font-size:17px;margin-bottom:6px}
+.task{padding-block:28px 6px;border-top:1px solid var(--line);margin-top:28px}
+.task > header{display:flex;flex-direction:column;gap:2px;margin-bottom:10px}
+.task > header .eyebrow{margin:0}
+.why{max-width:68ch}
+.steps li::marker,.rules li::marker{color:var(--accent);font-weight:700}
+.prompts{display:flex;flex-direction:column;gap:12px;margin:16px 0 4px}
+.prompt{margin:0;background:var(--surface);border-left:3px solid var(--accent);border-radius:4px;min-width:0}
+.prompt figcaption{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 10px 0 14px}
+.prompt figcaption span{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.prompt pre{margin:0;padding:8px 14px 14px;font-family:var(--mono);font-size:13px;line-height:1.6;white-space:pre-wrap;overflow-wrap:anywhere;color:var(--heading)}
+.prompt mark{background:var(--mark);color:var(--accent);font-weight:500;border-radius:2px;padding:0 2px}
+button{font-family:var(--font);cursor:pointer}
+.copy{font-size:12px;font-weight:700;color:var(--on-accent);background:var(--accent);border:0;border-radius:4px;padding:5px 10px;white-space:nowrap}
+.copy:hover{background:var(--accent-hover)}
+.copy.done{background:var(--heading);color:var(--bg)}
+.ghost{font-size:13px;font-weight:700;color:var(--heading);background:transparent;border:1.5px solid var(--heading);border-radius:4px;padding:8px 14px}
+.ghost:hover{border-color:var(--accent);color:var(--accent)}
+.tip{background:var(--tint);border-radius:4px;padding:10px 14px;margin:14px 0 4px;font-size:14px}
+.tip b{color:var(--accent);margin-right:6px}
+.tbl{overflow-x:auto;margin:14px 0 4px}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:520px}
+th{text-align:left;font-size:12px;font-weight:700;letter-spacing:.04em;color:var(--heading);border-bottom:2px solid var(--heading);padding:8px 10px;vertical-align:bottom}
+td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+td:first-child{font-weight:600;color:var(--heading)}
+td textarea{min-height:58px}
+.fill{display:flex;flex-direction:column;gap:6px;margin:16px 0 4px}
+.fill label{font-weight:600;color:var(--heading);font-size:14px}
+textarea{width:100%;font-family:var(--font);font-size:14px;line-height:1.6;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-bottom:2px solid var(--muted);border-radius:4px 4px 0 0;padding:8px 10px;resize:vertical}
+textarea::placeholder{color:var(--muted);opacity:.7}
+.check{list-style:none;padding:0;margin:0}
+.check li{margin:6px 0}
+.check label{display:flex;gap:10px;align-items:flex-start;cursor:pointer}
+input[type=checkbox],input[type=radio]{accent-color:var(--accent);width:17px;height:17px;margin:4px 0 0;flex:0 0 auto}
+.check .other{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;flex:1 1 auto;min-width:0}
+.check .other input[type=text]{flex:1 1 220px;min-width:0;font-family:var(--font);font-size:14px;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-bottom:2px solid var(--muted);border-radius:4px 4px 0 0;padding:5px 10px}
+.check .other input[type=text]::placeholder{color:var(--muted);opacity:.7}
+input[type=text]:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.choice{list-style:none;padding:0;margin:0;counter-reset:c}
+.choice li{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;padding:10px 0;border-bottom:1px solid var(--line);counter-increment:c}
+.choice li > span:first-child{flex:1 1 300px;min-width:0}
+.choice li > span:first-child::before{content:counter(c) ". ";font-weight:700;color:var(--accent)}
+.opts{display:flex;gap:16px}
+.opts label{display:flex;gap:6px;align-items:center;font-weight:600;font-size:14px;cursor:pointer}
+.opts input{margin:0}
+.end{margin-top:36px;padding-top:24px;border-top:2px solid var(--heading)}
+.end h2{margin-bottom:6px}
+.next{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;background:var(--surface);border-radius:6px;padding:14px 18px;margin-top:22px}
+.next b{color:var(--heading)}
+.notes-out{margin-top:10px}
+.small{font-size:12px;color:var(--muted)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:14px 0 4px}
+.cols > *{min-width:0}
+.cols h4{margin:0 0 6px;font-size:14px;font-weight:700;color:var(--heading)}
+.cols ul{padding-left:18px}
+.src{font-size:12px;color:var(--muted);margin:12px 0 0}
+.srcs{font-size:13px;padding-left:20px}
+.srcs a{color:var(--heading);text-decoration-color:var(--accent);overflow-wrap:anywhere}
+.pending{border:1.5px dashed var(--line);border-radius:6px;padding:22px}
+.pending .lab{color:var(--accent)}
+footer{border-top:1px solid var(--line);padding-block:18px 28px;font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 16px}
+footer b{color:var(--heading)}
+/* lektor */
+.agenda td{vertical-align:middle}
+.agenda .tm{font-family:var(--mono);font-size:13px;color:var(--accent);white-space:nowrap;font-weight:500}
+.agenda .mn{white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:400;color:var(--fg)}
+.agenda .bl{font-weight:600}
+.agenda td:first-child{font-weight:500}
+.agenda tr.pause td{background:var(--surface);color:var(--muted)}
+.agenda tfoot td{font-weight:700;color:var(--heading);border-bottom:0}
+.bar{display:inline-block;width:42px;height:5px;background:var(--line);border-radius:3px;margin-left:8px;vertical-align:middle;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent)}
+.blk{padding-block:22px 4px;border-top:1px solid var(--line);margin-top:22px}
+.blk > header{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-bottom:10px}
+.blk .bn{font-weight:800;color:var(--accent);font-size:18px;font-variant-numeric:tabular-nums}
+.blk h2{font-size:20px;flex:1 1 220px}
+.blk .bt{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.chip{display:inline-block;font-size:12px;font-weight:600;color:var(--heading);background:var(--surface);border-radius:3px;padding:2px 8px}
+blockquote{margin:6px 0 4px;padding:10px 14px;background:var(--tint);border-radius:4px;font-size:16px;font-weight:600;color:var(--heading)}
+blockquote small{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:2px}
+dl{margin:0}
+dt{font-weight:600;color:var(--heading);margin-top:8px}
+dt::before{content:"Ona: ";color:var(--muted);font-weight:500}
+dd{margin:2px 0 0}
+dd::before{content:"Ty: ";color:var(--accent);font-weight:700}
+.short{font-size:14px;margin-top:12px}
+.short b{color:var(--accent)}
+.risk td:first-child{color:var(--accent);font-weight:700;width:90px}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+@media (max-width:520px){ .who{text-align:left} .logo{height:38px} }
+</style>
+<header class="top"><div class="wrap"><div class="brand"><svg class="logo logo-l" role="img" aria-label="Rasťo AI" viewBox="0 0 620 255" xmlns="http://www.w3.org/2000/svg">
+<g fill="none" stroke="#E60000" stroke-width="1.4" opacity="0.55"><line x1="120" y1="110" x2="94.0" y2="96.2"/><line x1="120" y1="110" x2="105.0" y2="86.1"/><line x1="120" y1="110" x2="120.0" y2="82.4"/><line x1="120" y1="110" x2="135.0" y2="86.1"/><line x1="120" y1="110" x2="146.0" y2="96.2"/><line x1="94.0" y1="96.2" x2="105.0" y2="86.1"/><line x1="94.0" y1="96.2" x2="120.0" y2="82.4"/><line x1="94.0" y1="96.2" x2="68.8" y2="118.3"/><line x1="94.0" y1="96.2" x2="71.1" y2="93.6"/><line x1="94.0" y1="96.2" x2="86.6" y2="73.4"/><line x1="105.0" y1="86.1" x2="120.0" y2="82.4"/><line x1="105.0" y1="86.1" x2="135.0" y2="86.1"/><line x1="105.0" y1="86.1" x2="86.6" y2="73.4"/><line x1="105.0" y1="86.1" x2="111.0" y2="62.9"/><line x1="120.0" y1="82.4" x2="135.0" y2="86.1"/><line x1="120.0" y1="82.4" x2="146.0" y2="96.2"/><line x1="120.0" y1="82.4" x2="111.0" y2="62.9"/><line x1="120.0" y1="82.4" x2="137.8" y2="65.0"/><line x1="135.0" y1="86.1" x2="146.0" y2="96.2"/><line x1="135.0" y1="86.1" x2="111.0" y2="62.9"/><line x1="135.0" y1="86.1" x2="137.8" y2="65.0"/><line x1="135.0" y1="86.1" x2="159.8" y2="79.2"/><line x1="146.0" y1="96.2" x2="137.8" y2="65.0"/><line x1="146.0" y1="96.2" x2="159.8" y2="79.2"/><line x1="146.0" y1="96.2" x2="171.2" y2="101.7"/><line x1="68.8" y1="118.3" x2="71.1" y2="93.6"/><line x1="68.8" y1="118.3" x2="57.6" y2="143.1"/><line x1="68.8" y1="118.3" x2="48.0" y2="110.0"/><line x1="71.1" y1="93.6" x2="86.6" y2="73.4"/><line x1="71.1" y1="93.6" x2="48.0" y2="110.0"/><line x1="71.1" y1="93.6" x2="57.6" y2="76.9"/><line x1="86.6" y1="73.4" x2="111.0" y2="62.9"/><line x1="86.6" y1="73.4" x2="57.6" y2="76.9"/><line x1="86.6" y1="73.4" x2="84.0" y2="52.6"/><line x1="111.0" y1="62.9" x2="137.8" y2="65.0"/><line x1="111.0" y1="62.9" x2="84.0" y2="52.6"/><line x1="111.0" y1="62.9" x2="120.0" y2="43.8"/><line x1="137.8" y1="65.0" x2="159.8" y2="79.2"/><line x1="137.8" y1="65.0" x2="120.0" y2="43.8"/><line x1="137.8" y1="65.0" x2="156.0" y2="52.6"/><line x1="159.8" y1="79.2" x2="171.2" y2="101.7"/><line x1="159.8" y1="79.2" x2="156.0" y2="52.6"/><line x1="159.8" y1="79.2" x2="182.4" y2="76.9"/><line x1="171.2" y1="101.7" x2="182.4" y2="76.9"/><line x1="171.2" y1="101.7" x2="192.0" y2="110.0"/></g><g stroke="none"><circle cx="120" cy="110" r="5.5" fill="#111111"/><circle cx="94.0" cy="96.2" r="4" fill="#E60000"/><circle cx="105.0" cy="86.1" r="3" fill="#E60000"/><circle cx="120.0" cy="82.4" r="4" fill="#111111"/><circle cx="135.0" cy="86.1" r="3" fill="#E60000"/><circle cx="146.0" cy="96.2" r="4" fill="#E60000"/><circle cx="68.8" cy="118.3" r="4" fill="#E60000"/><circle cx="71.1" cy="93.6" r="3" fill="#E60000"/><circle cx="86.6" cy="73.4" r="4" fill="#E60000"/><circle cx="111.0" cy="62.9" r="3" fill="#111111"/><circle cx="137.8" cy="65.0" r="4" fill="#E60000"/><circle cx="159.8" cy="79.2" r="3" fill="#E60000"/><circle cx="171.2" cy="101.7" r="4" fill="#111111"/><circle cx="57.6" cy="143.1" r="4" fill="#E60000"/><circle cx="48.0" cy="110.0" r="3" fill="#E60000"/><circle cx="57.6" cy="76.9" r="4" fill="#111111"/><circle cx="84.0" cy="52.6" r="3" fill="#E60000"/><circle cx="120.0" cy="43.8" r="4" fill="#E60000"/><circle cx="156.0" cy="52.6" r="3" fill="#111111"/><circle cx="182.4" cy="76.9" r="4" fill="#E60000"/><circle cx="192.0" cy="110.0" r="3" fill="#E60000"/></g>
+<text x="208" y="158" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="150" font-weight="800" letter-spacing="-4"><tspan fill="#111111">R</tspan><tspan fill="#E60000">K</tspan></text>
+<text x="305" y="200" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="11" fill="#111111">RASŤO KOZLÍK</text>
+<text x="305" y="230" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14.5" font-weight="600" letter-spacing="6.2" fill="#E60000">RASŤO AI · AI LEKTOR</text>
+</svg><svg class="logo logo-d" role="img" aria-label="Rasťo AI" viewBox="0 0 620 255" xmlns="http://www.w3.org/2000/svg">
+<g fill="none" stroke="#E60000" stroke-width="1.4" opacity="0.55"><line x1="120" y1="110" x2="94.0" y2="96.2"/><line x1="120" y1="110" x2="105.0" y2="86.1"/><line x1="120" y1="110" x2="120.0" y2="82.4"/><line x1="120" y1="110" x2="135.0" y2="86.1"/><line x1="120" y1="110" x2="146.0" y2="96.2"/><line x1="94.0" y1="96.2" x2="105.0" y2="86.1"/><line x1="94.0" y1="96.2" x2="120.0" y2="82.4"/><line x1="94.0" y1="96.2" x2="68.8" y2="118.3"/><line x1="94.0" y1="96.2" x2="71.1" y2="93.6"/><line x1="94.0" y1="96.2" x2="86.6" y2="73.4"/><line x1="105.0" y1="86.1" x2="120.0" y2="82.4"/><line x1="105.0" y1="86.1" x2="135.0" y2="86.1"/><line x1="105.0" y1="86.1" x2="86.6" y2="73.4"/><line x1="105.0" y1="86.1" x2="111.0" y2="62.9"/><line x1="120.0" y1="82.4" x2="135.0" y2="86.1"/><line x1="120.0" y1="82.4" x2="146.0" y2="96.2"/><line x1="120.0" y1="82.4" x2="111.0" y2="62.9"/><line x1="120.0" y1="82.4" x2="137.8" y2="65.0"/><line x1="135.0" y1="86.1" x2="146.0" y2="96.2"/><line x1="135.0" y1="86.1" x2="111.0" y2="62.9"/><line x1="135.0" y1="86.1" x2="137.8" y2="65.0"/><line x1="135.0" y1="86.1" x2="159.8" y2="79.2"/><line x1="146.0" y1="96.2" x2="137.8" y2="65.0"/><line x1="146.0" y1="96.2" x2="159.8" y2="79.2"/><line x1="146.0" y1="96.2" x2="171.2" y2="101.7"/><line x1="68.8" y1="118.3" x2="71.1" y2="93.6"/><line x1="68.8" y1="118.3" x2="57.6" y2="143.1"/><line x1="68.8" y1="118.3" x2="48.0" y2="110.0"/><line x1="71.1" y1="93.6" x2="86.6" y2="73.4"/><line x1="71.1" y1="93.6" x2="48.0" y2="110.0"/><line x1="71.1" y1="93.6" x2="57.6" y2="76.9"/><line x1="86.6" y1="73.4" x2="111.0" y2="62.9"/><line x1="86.6" y1="73.4" x2="57.6" y2="76.9"/><line x1="86.6" y1="73.4" x2="84.0" y2="52.6"/><line x1="111.0" y1="62.9" x2="137.8" y2="65.0"/><line x1="111.0" y1="62.9" x2="84.0" y2="52.6"/><line x1="111.0" y1="62.9" x2="120.0" y2="43.8"/><line x1="137.8" y1="65.0" x2="159.8" y2="79.2"/><line x1="137.8" y1="65.0" x2="120.0" y2="43.8"/><line x1="137.8" y1="65.0" x2="156.0" y2="52.6"/><line x1="159.8" y1="79.2" x2="171.2" y2="101.7"/><line x1="159.8" y1="79.2" x2="156.0" y2="52.6"/><line x1="159.8" y1="79.2" x2="182.4" y2="76.9"/><line x1="171.2" y1="101.7" x2="182.4" y2="76.9"/><line x1="171.2" y1="101.7" x2="192.0" y2="110.0"/></g><g stroke="none"><circle cx="120" cy="110" r="5.5" fill="#FFFFFF"/><circle cx="94.0" cy="96.2" r="4" fill="#E60000"/><circle cx="105.0" cy="86.1" r="3" fill="#E60000"/><circle cx="120.0" cy="82.4" r="4" fill="#FFFFFF"/><circle cx="135.0" cy="86.1" r="3" fill="#E60000"/><circle cx="146.0" cy="96.2" r="4" fill="#E60000"/><circle cx="68.8" cy="118.3" r="4" fill="#E60000"/><circle cx="71.1" cy="93.6" r="3" fill="#E60000"/><circle cx="86.6" cy="73.4" r="4" fill="#E60000"/><circle cx="111.0" cy="62.9" r="3" fill="#FFFFFF"/><circle cx="137.8" cy="65.0" r="4" fill="#E60000"/><circle cx="159.8" cy="79.2" r="3" fill="#E60000"/><circle cx="171.2" cy="101.7" r="4" fill="#FFFFFF"/><circle cx="57.6" cy="143.1" r="4" fill="#E60000"/><circle cx="48.0" cy="110.0" r="3" fill="#E60000"/><circle cx="57.6" cy="76.9" r="4" fill="#FFFFFF"/><circle cx="84.0" cy="52.6" r="3" fill="#E60000"/><circle cx="120.0" cy="43.8" r="4" fill="#E60000"/><circle cx="156.0" cy="52.6" r="3" fill="#FFFFFF"/><circle cx="182.4" cy="76.9" r="4" fill="#E60000"/><circle cx="192.0" cy="110.0" r="3" fill="#E60000"/></g>
+<text x="208" y="158" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="150" font-weight="800" letter-spacing="-4"><tspan fill="#FFFFFF">R</tspan><tspan fill="#E60000">K</tspan></text>
+<text x="305" y="200" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="11" fill="#FFFFFF">RASŤO KOZLÍK</text>
+<text x="305" y="230" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14.5" font-weight="600" letter-spacing="6.2" fill="#E60000">RASŤO AI · AI LEKTOR</text>
+</svg><div class="who">AI mentoring pre <b>KORA Events & Marketing</b><br>p. Katarína Mačeková</div></div><nav class="tabs" id="tabs" aria-label="Sedenia"></nav></div></header>
+<main class="wrap" id="view"></main>
+<footer class="wrap"><span><b>Rasťo AI</b> · www.rastoai.sk</span></footer>
+<!-- OBSAH: pole "sessions" nižšie. Nové sedenie = zmeniť status na "ready" a doplniť obsah podľa sedenia 1. -->
+<script type="application/json" id="data">{"mode": "client", "meta": {"client": "KORA Events & Marketing", "person": "p. Katarína Mačeková", "total": 5, "contact": ["Rasťo AI", "www.rastoai.sk"]}, "sessions": [{"n": 0, "type": "intro", "status": "ready", "title": "ChatGPT Business v praxi", "date": "pred sedením 1", "duration": "cca 15 minút čítania", "lead": "Prehľad toho, ako funguje firemný ChatGPT Business: priestor a role, kde čo nájdete, čo zvládne s vašimi podkladmi a na čo dávať pozor. Prečítajte si ho pred prvým sedením. Na sedení sa k jednotlivým častiam vrátime pri praktickej práci.", "sections": [{"eb": "Priestor a prístup", "title": "Firemný priestor má vlastné pravidlá a vlastný obsah", "bullets": ["Každý sa prihlasuje vlastným účtom, nikdy spoločným heslom.", "Osobný a firemný priestor sú oddelené. Pracovné veci patria do firemného.", "Názov aktívneho priestoru vidíte v ľavom dolnom rohu. Pred prácou s podkladmi klientov si ho skontrolujte."], "fills": [["Názov nášho firemného priestoru:", 1]]}, {"eb": "Priestor a prístup", "title": "Predplatné, rola a prístup sú tri rôzne veci", "table": {"head": ["Pojem", "Čo určuje", "Príklad"], "rows": [["Miesto v Business", "Aké funkcie máte k dispozícii", "Projekty, agenti, doplnky"], ["Rola v priestore", "Čo smiete spravovať", "Rola nerozšíri funkcie nad rámec miesta"], ["Prístup k obsahu", "Čo konkrétne vidíte", "Členstvo v tíme nesprístupní osobné chaty kolegov"]]}, "src": "OpenAI, Roles and workspace permissions"}, {"eb": "Priestor a prístup", "title": "Owner, Admin a Member majú rozdielne oprávnenia", "table": {"head": ["Oprávnenie", "Owner", "Admin", "Member"], "rows": [["Nastavenia celého priestoru", "áno", "čiastočne", "nie"], ["Zapínanie funkcií (Permissions & Roles)", "áno", "áno", "nie"], ["Správa doplnkov v Admin console", "áno", "áno", "nie"], ["Používanie funkcií", "podľa miesta", "podľa miesta", "podľa miesta"]]}, "note": "Presný rozsah práv Admina dokumentácia nevymenúva. Overíme ho vo vašom priestore na sedení 1.", "fills": [["Moja rola v priestore:", 1], ["Kto je Owner alebo Admin nášho priestoru:", 1]], "src": "OpenAI, Roles and workspace permissions; Business release notes"}, {"eb": "Orientácia", "title": "Ľavý panel: kde čo nájdete", "bullets": ["„Nový čet“: jednorazová otázka.", "„Projekty“: opakovaná práca s podkladmi, napríklad jeden klient alebo jeden event.", "„Naplánované“: úlohy, ktoré bežia podľa plánu.", "„Agenti“: nastavené postupy pre tím.", "„Doplnky“: prepojenie s ďalšími aplikáciami."], "note": "Názvy v menu sa môžu líšiť podľa verzie a nastavenia priestoru."}, {"eb": "Orientácia", "title": "Web a desktopová aplikácia sa v niečom líšia", "cols": [{"title": "Web (chatgpt.com)", "items": ["Chaty, projekty, súbory a agenti", "Úlohy v režime Work bežia v cloude", "Rovnaké prostredie na každom počítači"]}, {"title": "Desktopová aplikácia", "items": ["Prístup k priečinkom v počítači, ak je povolený", "Hlas a ovládanie počítača, ak sú dostupné", "Úloha v cloude pokračuje aj po zatvorení aplikácie"]}], "tip": "Podklady agentúry máte zatiaľ najmä v počítači. Desktopová aplikácia môže byť cesta, ako s nimi ChatGPT pracuje priamo. Overíme to na sedení 1 pri výbere úložiska.", "src": "OpenAI, Use ChatGPT"}, {"eb": "Čo ChatGPT zvládne", "title": "Čo zvládne ChatGPT s vašimi podkladmi", "table": {"head": ["Úloha", "Príklad z vašej práce"], "rows": [["Hľadať v PDF", "Aká je kapacita sály a do kedy treba potvrdiť počet hostí? S odkazom na stranu zmluvy s hotelom."], ["Porovnať dokumenty", "Rozdiely dvoch verzií ponuky cateringu"], ["Skontrolovať tabuľku", "Chýbajúce položky a duplicity v rozpočte eventu"], ["Napísať návrh", "Ponuka pre klienta podľa šablóny s označením chýbajúcich údajov"], ["Spracovať poradu", "Zápis z porady s klientom s úlohami, zodpovednými a termínmi"]]}, "src": "OpenAI, Use ChatGPT"}, {"eb": "Čo ChatGPT zvládne", "title": "Návrh výstupu a vykonanie akcie sú dve rôzne veci", "cols": [{"title": "Návrh", "items": ["ChatGPT pripraví text, tabuľku alebo pripomienky", "O ďalšom kroku rozhodujete vy", "Na tom stojí väčšina mentoringu"]}, {"title": "Akcia v inom systéme", "items": ["Cez doplnok niečo odošle, vytvorí alebo zapíše, napríklad e-mail dodávateľovi", "Zápisové akcie agenta sa predvolene pýtajú na potvrdenie", "Zapína ich správca priestoru"]}], "src": "OpenAI Help, Workspace Agents; OpenAI, Apps and connectors"}, {"eb": "Čo ChatGPT zvládne", "title": "Režim, model a nástroj vyberajte podľa úlohy", "table": {"head": ["Voľba", "Kedy ju použiť", "Príklad"], "rows": [["Chat", "Otázka, úprava textu, krátke zhrnutie", "Prepíš pozvánku pre hostí do neformálnejšieho tónu"], ["Work", "Väčšia úloha s hotovým výstupom", "Z briefu, ponuky cateringu a technických požiadaviek priprav podklad k ponuke"], ["Model", "Rýchly na bežné úlohy, výkonnejší na zložité", "Rozpočet eventu vo viacerých variantoch"], ["Nástroj", "Web, analýza súborov, tvorba dokumentu", "Overenie verejných informácií o priestore"]]}, "src": "OpenAI, Use ChatGPT"}, {"eb": "Spôsoby práce", "title": "Projekt drží pokope pravidlá, podklady a rozhovory", "bullets": ["Inštrukcie: ako má ChatGPT v projekte pracovať.", "Zdroje: súbory a texty, z ktorých vychádza. Pridať ich môžete aj z aplikácií, uložených chatov alebo vloženého textu.", "Rozhovory: pre každý výstup samostatný."], "note": "Model nemusí správne použiť každý nahraný súbor. Kontrolujte, z čoho odpoveď vychádza.", "text_after": "Prvý projekt „KORA Events - back office“ založíte na sedení 1 (úloha 4).", "src": "OpenAI, Use ChatGPT; Business release notes"}, {"eb": "Spôsoby práce", "title": "Jedna úloha, štyri spôsoby: harmonogram eventu", "table": {"head": ["Spôsob", "Čo to je", "Kedy ho použiť"], "rows": [["Chat", "Jednorazová otázka s briefom", "Občasný harmonogram"], ["Projekt", "Inštrukcie, šablóna harmonogramu a rozhovory", "Harmonogramy pre jedného klienta alebo event"], ["Agent", "Nastavený postup, môže bežať podľa plánu", "Pravidelná práca pre celý tím"], ["Schopnosť", "Opakovateľný postup, ktorý ChatGPT použije sám", "Jednotný harmonogram pre všetkých"]]}, "note": "Vlastné GPT plánuje OpenAI ukončiť (oznámené 11. 9. 2026). V mentoringu preto na nich nové postupy nestavame.", "src": "OpenAI, Business release notes, 11. 9. 2026; OpenAI Help, Workspace Agents"}, {"eb": "Spôsoby práce", "title": "Agent v priestore: čo vie a kto ho smie vytvoriť", "bullets": ["Vytvára sa zo šablóny alebo v nástroji na tvorbu agentov.", "Môže bežať podľa plánu a pracovať s pripojenými aplikáciami.", "Zdieľanie: súkromne, cez odkaz alebo v adresári priestoru.", "Členovia ho vytvárajú, len ak to správca povolí.", "Spustenia agentov čerpajú kredity priestoru."], "src": "OpenAI Help, Workspace Agents; Business release notes"}, {"eb": "Spôsoby práce", "title": "Doplnok sprístupní nástroj, prístup k dátam dáva váš účet", "bullets": ["Správca určí, ktoré doplnky môžete používať.", "Svoj účet v danej službe autorizujete vy.", "Doplnok vidí len to, k čomu má prístup váš účet.", "Ktoré doplnky dávajú zmysel pre agentúru (e-mail, kalendár, úložisko), vyberieme na sedení 1."], "src": "OpenAI, Apps and connectors; Business release notes"}, {"eb": "Bezpečnosť a kontrola", "title": "Pred zdieľaním skontrolujte, komu a čo posielate", "bullets": ["Komu: konkrétni ľudia, skupina, celý priestor alebo odkaz.", "Čo: chat, projekt, agent alebo stránka.", "Oprávnenie: môže používať alebo môže upravovať.", "Obsah: ponuky, ceny klientov a osobné údaje hostí len oprávneným."], "src": "OpenAI Help, Workspace Agents; Business release notes"}, {"eb": "Bezpečnosť a kontrola", "title": "Ochrana údajov nezaručí správnosť výstupu", "cols": [{"title": "Ochrana údajov", "items": ["Business predvolene netrénuje na vašich dátach", "Prihlásenie s overením (MFA), správa priestoru", "Čo smiete nahrať, určujú pravidlá agentúry"]}, {"title": "Správnosť výstupu", "items": ["Model sa môže mýliť aj v chránenom priestore", "Citácia môže ukazovať na nesprávne miesto", "Za výsledok pred klientom zodpovedáte vy"]}], "src": "OpenAI, ChatGPT pricing; Managing data, sharing, and privacy in ChatGPT Business"}, {"eb": "Bezpečnosť a kontrola", "title": "Päť otázok pred použitím výstupu", "ordered": ["Dá sa každé tvrdenie dohľadať v zdroji (súbor, strana)?", "Je to správna a platná verzia dokumentu, napríklad posledná ponuka dodávateľa?", "Čo chýba a je to zreteľne označené?", "Neodporujú si podklady?", "Ktoré rozhodnutie musíte urobiť vy alebo klient?"]}, {"eb": "Bezpečnosť a kontrola", "title": "Dobré zadanie má päť častí", "table": {"head": ["Časť", "Príklad: harmonogram eventu"], "rows": [["Cieľ", "Návrh harmonogramu dňa firemného večierka"], ["Kontext", "Klient A, 120 hostí, harmonogram uvidí klient"], ["Vstupy", "Brief klienta a ponuka cateringu v tomto projekte"], ["Výstup", "Tabuľka do Wordu, chýbajúce údaje zreteľne označené"], ["Kontrola", "Pri každom čase zdroj, nič nedopĺňať"]]}, "prompts": [["Vzor zadania v piatich častiach", "Cieľ: navrhni harmonogram dňa firemného večierka.\nKontext: [klient], [počet] hostí, harmonogram uvidí klient.\nVstupy: brief klienta a ponuka cateringu v tomto projekte.\nVýstup: tabuľka so stĺpcami čas, aktivita, kto zodpovedá, poznámka. Chýbajúce údaje označ slovom DOPLNIŤ.\nKontrola: pri každom čase uveď, z ktorého podkladu vychádza. Nič nedopĺňaj."]]}], "sources": [["OpenAI: ChatGPT pricing", "https://learn.chatgpt.com/docs/pricing"], ["OpenAI: Use ChatGPT", "https://learn.chatgpt.com/docs/use-chatgpt"], ["OpenAI: Roles and workspace permissions", "https://learn.chatgpt.com/docs/enterprise/roles-and-workspace-permissions"], ["OpenAI: Apps and connectors", "https://learn.chatgpt.com/docs/enterprise/apps-and-connectors"], ["OpenAI: ChatGPT Workspace Agents", "https://help.openai.com/en/articles/20001143"], ["OpenAI: ChatGPT Business release notes", "https://help.openai.com/en/articles/11391654"]], "sources_note": "Overené 10. 10. 2026, plánované ukončenie vlastných GPT a doplnky overené 27. 10. 2026. Dostupnosť funkcií sa môže meniť."}, {"n": 1, "client": "KORA Events & Marketing", "person": "p. Katarína Mačeková", "date": "piatok 30. 10. 2026", "place": "osobne, Zlatovská 27, Trenčín", "title": "Porozumenie ChatGPT a prepojenie s prostredím agentúry", "goal": "Rozumiete, ako ChatGPT Business pracuje s informáciami a súbormi, a odchádzate s nastaveným prostredím, v ktorom budeme od sedenia 2 stavať vašich asistentov.", "outputs": ["Cieľ spolupráce zapísaný vašimi slovami", "Kontrolný prompt na overovanie výstupov", "5 pravidiel pre citlivé údaje klientov a hostí", "Projekt „KORA Events - back office“ s inštrukciami", "Nastavené vlastné inštrukcie a prečistená pamäť", "Rozhodnutie, kam budete ukladať výstupy"], "program": [["1", "Porozumenie ChatGPT", "30. 10."], ["2", "Mapa procesov agentúry", "6. 11."], ["3", "Back office asistenti", "13. 11."], ["4", "Asistenti pre tím eventu", "20. 11."], ["5", "Aplikácia pre hostí", "27. 11."]], "how": ["Prompty v sivých rámčekoch skopírujte do ChatGPT.", "Text v [hranatých zátvorkách] nahraďte vlastnými údajmi.", "Do bielych polí si píšte poznámky. Ukladajú sa vo vašom prehliadači, pri tomto odkaze."], "info": {"title": "Kam smerujeme", "text": "Na sedení uvidíte asistenta, ktorý z briefu klienta pripraví harmonogram dňa eventu, úlohy pre dodávateľov a zoznam informácií, ktoré v briefe chýbajú. Podobných asistentov si na sedeniach 2 až 4 postavíte sama na vlastných podkladoch."}, "tasks": [{"id": "1", "title": "Cieľ spolupráce", "why": "Na piatom sedení sa k nemu vrátime a overíme, či sme ho splnili.", "fills": [["Po piatom sedení chcem mať hotové:", 4], ["Najviac času mi dnes v práci zaberá:", 3]]}, {"id": "2", "title": "Overujte, z čoho ChatGPT vychádza", "why": "ChatGPT píše rovnako presvedčivo, keď údaj pozná, aj keď si ho domyslí. V eventovej práci sa to stáva najčastejšie pri cenách, kapacitách priestorov, otváracích hodinách a kontaktoch.", "facts": ["Odpoveď môže vychádzať z piatich zdrojov: z toho, čo sa model naučil, z vyhľadávania na webe, z nahraných súborov, z pamäte a z pripojených aplikácií.", "V dlhom chate sa začiatok konverzácie postupne stráca. Novú tému začnite v novom chate alebo v projekte.", "Na bežné texty stačí predvolený model. Na rozpočet a harmonogram s nadväznosťami zvoľte model, ktorý premýšľa dlhšie."], "steps": ["Otvorte nový chat.", "Vložte prompt A a doplňte údaje z eventu, ktorý práve pripravujete.", "Po odpovedi vložte do toho istého chatu kontrolný prompt B.", "Zapíšte si, čo si ChatGPT domyslel a čo treba overiť."], "prompts": [["Prompt A · reálna úloha", "Pripravujem [typ podujatia] pre [počet] hostí.\nTermín: [dátum], miesto: [mesto a priestor].\nNavrhni harmonogram dňa podujatia od príchodu dodávateľov po odchod posledných hostí.\nDaj ho do tabuľky so stĺpcami: čas, aktivita, kto zodpovedá, poznámka."], ["Prompt B · kontrolný prompt (uložte si ho)", "Prejdi svoju predchádzajúcu odpoveď a vypíš:\n1. Čo si predpokladal bez toho, aby to bolo v mojom zadaní.\n2. Ktoré čísla, ceny, časy a kapacity treba overiť u klienta alebo dodávateľa.\n3. Aké informácie chýbajú, aby bol výstup použiteľný.\nOdpovedz v tabuľke."]], "fills": [["Čo si ChatGPT domyslel a čo overím:", 3]]}, {"id": "3", "title": "Pravidlá pre citlivé údaje", "why": "Vo firemnom ChatGPT Business sa dáta z workspace predvolene nepoužívajú na trénovanie modelov a ostatní členovia vaše chaty nevidia, kým ich nezdieľate. Zodpovednosť za osobné údaje klientov a hostí podľa GDPR však ostáva na agentúre.", "table": {"head": ["Úroveň", "Príklady", "Vaše príklady"], "rows": [["Vkladať bez úprav", "Verejné informácie, vlastné texty, šablóny bez mien, koncepty eventov", ""], ["Najprv anonymizovať", "Briefy klientov („Klient A“), rozpočty, korešpondencia s dodávateľmi", ""], ["Nevkladať", "Zoznamy hostí s menami a kontaktmi, podpísané zmluvy, interné údaje KORA a.s.", ""]], "widths": [2200, 4100, 3200]}, "list_title": "Návrh 5 pravidiel agentúry (upravte si ich)", "list": ["Pracovné veci riešim len vo firemnom ChatGPT Business, nie v súkromnom účte.", "Mená hostí, ich kontakty a podpísané zmluvy do ChatGPT nevkladám.", "Briefy a rozpočty klientov pred vložením anonymizujem.", "Každé číslo, cenu, termín a kapacitu z výstupu overím.", "Chat s podkladmi klienta zdieľam len s kolegom, ktorý na klientovi pracuje."], "tip": "Anonymizácia vo Worde ešte pred vložením do ChatGPT: Ctrl + H, do poľa Nájsť napíšte názov klienta, do poľa Nahradiť „Klient A“ a zvoľte Nahradiť všetko.", "fills": [["Moja úprava alebo doplnenie pravidiel:", 3]]}, {"id": "4", "title": "Založte projekt „KORA Events - back office“", "why": "Projekt drží inštrukcie, súbory a históriu jednej témy na jednom mieste. ChatGPT v ňom vie, pre koho pracuje a v akom formáte chcete výstupy, bez toho, aby ste to opakovali v každom chate.", "steps": ["V ľavom paneli ChatGPT kliknite na Projekty a vytvorte nový projekt.", "Pomenujte ho „KORA Events - back office“.", "Ak sa pri zakladaní ponúkne pamäť len pre projekt, zvoľte ju. Informácie z tohto projektu sa tak nebudú miešať s ostatnými chatmi.", "V nastaveniach projektu otvorte Inštrukcie a vložte text z rámčeka nižšie. Doplňte údaje v zátvorkách.", "Nahrajte 2-3 anonymizované podklady: brief klienta, ponuku a harmonogram.", "V projekte otvorte nový chat a vložte testovací prompt."], "prompts": [["Inštrukcie projektu", "Si asistent eventovej agentúry KORA Events & Marketing v Trenčíne. Pripravujeme firemné podujatia, interné eventy a marketingové aktivity. [Doplňte typických klientov a typ podujatí.]\n\nPíš po slovensky, vecne a bez marketingových fráz.\nAk chýba termín, počet hostí, rozpočet alebo miesto, najprv sa opýtaj, potom tvor.\nHarmonogramy, rozpočty a zoznamy dodávateľov daj do tabuľky.\nCeny a kapacity nevymýšľaj. Ak ich odhaduješ, označ ich ako odhad.\nPri každom výstupe uveď, z ktorého podkladu si čerpal."], ["Testovací prompt", "Tu je brief od klienta:\n[vložte anonymizovaný brief]\n\nVypíš, čo v ňom chýba na prípravu ponuky, a navrhni 5 otázok, ktoré klientovi pošlem e-mailom."]], "fills": [["Podklady, ktoré som nahrala do projektu:", 3]]}, {"id": "5", "title": "Nastavte vlastné inštrukcie a pamäť", "why": "Vlastné inštrukcie napíšete raz a ChatGPT ich použije v každom chate. Pamäť si zapamätá informácie z rozhovorov. Je dobré vedieť, čo v nej je.", "steps": ["Kliknite na svoje meno vľavo dole a otvorte Nastavenia, časť Personalizácia.", "Do poľa o vás vložte text „O mne“, do poľa o štýle odpovedí text „Ako odpovedať“.", "Otvorte správu pamäte a prejdite uložené informácie. Vymažte, čo nesedí alebo je citlivé.", "V novom chate vložte kontrolný prompt a overte, čo si ChatGPT o vás pamätá."], "prompts": [["O mne", "Vediem eventovú divíziu KORA Events & Marketing v Trenčíne, ktorá je súčasťou KORA a.s. Pripravujem firemné podujatia, interné eventy a marketingové aktivity. Pracujem s klientmi, dodávateľmi (catering, technika, priestory) a s kolegom. [Doplňte, čo by mal ChatGPT ešte vedieť.]"], ["Ako odpovedať", "Píš po slovensky, vecne a stručne.\nVýstupy, ktoré sa dajú dať do tabuľky, daj do tabuľky.\nKeď ti chýba dôležitá informácia, najprv sa opýtaj.\nČísla, ceny a kapacity nevymýšľaj. Ak odhaduješ, napíš to."], ["Kontrola pamäte", "Čo si o mne pamätáš? Vypíš to v bodoch."]], "tip": "Ak pracujete pre viacerých klientov, nechajte pamäť zapnutú a každého väčšieho klienta alebo event držte v samostatnom projekte s pamäťou len pre projekt."}, {"id": "6", "title": "Projekt alebo agent?", "why": "Na opakovanú prácu máte v ChatGPT Business viac možností (prehľad je v úvode, časť Spôsoby práce). Vlastné GPT plánuje OpenAI ukončiť, preto asistentov staviame ako projekty a agentov.", "table": {"head": ["", "Projekt", "Agent"], "rows": [["Na čo", "Pracovný priestor pre klienta alebo event", "Nastavený postup pre tím"], ["Obsahuje", "Inštrukcie, súbory, históriu chatov", "Inštrukcie, súbory, schopnosti, pripojené aplikácie"], ["Príklad", "Event pre klienta X od briefu po report", "Každý pondelok prehľad úloh na eventy v týždni"], ["Zdieľanie", "S členmi workspace", "Súkromne, cez odkaz alebo v adresári priestoru"], ["Kto ho vytvorí", "Každý člen", "Člen, ak to správca povolí"]]}, "choice": {"title": "Cvičenie: čo by ste zvolili?", "options": ["Projekt", "Agent"], "items": ["Event pre jedného klienta, ktorý pripravujete tri mesiace.", "Každý pondelok chcete mať prehľad úloh na eventy v danom týždni.", "Ľudia z tímu eventu majú mať rovnaký postup na prípravu podkladov pre moderátora a otvoria si ho cez odkaz.", "Interný event KORA vo februári so všetkými podkladmi na jednom mieste."]}}, {"id": "7", "title": "Súbory, doplnky a úložisko", "why": "ChatGPT dobre zhrnie dokument, porovná ponuky a vytiahne tabuľku z PDF. Slabšie zvláda skeny, veľmi veľké tabuľky a presné formátovanie pri exporte do Wordu. Výstupy treba ukladať na dohodnuté miesto, inak ostanú roztrúsené v chatoch.", "prompts": [["Porovnanie ponúk (nahrajte 2-3 ponuky)", "Porovnaj priložené ponuky dodávateľov v tabuľke: cena spolu, čo je v cene, čo nie je v cene, platnosť ponuky, riziká.\nNa konci napíš, na čo sa ešte opýtať každého dodávateľa."], ["Tabuľka z PDF do Excelu", "Z priloženého PDF vytiahni tabuľku [názov alebo strana] a priprav ju ako súbor Excel na stiahnutie. Ak niečo nevieš prečítať, označ to."], ["Výstup do Wordu", "Výsledok priprav ako dokument Word (.docx) na stiahnutie. Použi nadpisy a tabuľky, bez farieb."]], "fills": [["Kde dnes ležia podklady agentúry:", 2], ["Kto je admin nášho ChatGPT workspace:", 1], ["Kam budem ukladať výstupy z ChatGPT:", 2]], "checks": {"title": "Doplnky (prepojenia s aplikáciami), ktoré chcem používať:", "items": ["e-mail", "kalendár", "úložisko súborov", "iné: ____________"]}}], "others": {"title": "Na okraj: iné AI nástroje", "text": "Pracujeme v ChatGPT Business. Pre orientáciu, kedy by dávali zmysel iné nástroje:", "rows": [["Microsoft 365 Copilot", "Ak bude agentúra pracovať v Outlooku, Worde, Exceli a Teams. AI priamo v dokumentoch a e-mailoch."], ["Claude", "Dlhé podklady, ponuky a scenáre. Alternatíva k ChatGPT na písanie a prácu s dokumentmi."], ["Gemini", "Ak by firma prešla na Google Workspace (Gmail, Disk, Dokumenty)."]]}, "homework": ["Projekt „KORA Events - back office“ použite aspoň na 3 reálne úlohy. Poznačte si, kde výstup sedel a kde nie.", "Počas týždňa si zapisujte, čo vám v práci zabralo najviac času. Je to vstup do mapy procesov na sedení 2.", "Pripravte vzory: brief od klienta, ponuku, rozpočet a harmonogram. Stačia staršie, s anonymizovanými menami."], "homework_time": "1-2 hodiny", "next": "Sedenie 2 · Mapa procesov agentúry · 6. 11. 2026", "status": "ready", "duration": "3 hodiny"}, {"n": 2, "status": "pending", "title": "Mapa procesov agentúry", "date": "piatok 6. 11. 2026", "duration": "3 hodiny", "teaser": "Prejdeme prácu agentúry od dopytu po report po evente. Určíme, kde vám AI ušetrí najviac času, a navrhneme sadu asistentov. Prvý asistent vznikne už na tomto sedení."}, {"n": 3, "status": "pending", "title": "Back office asistenti", "date": "piatok 13. 11. 2026", "duration": "3 hodiny", "teaser": "Asistenti na brief od klienta, ponuky a rozpočty, harmonogramy a komunikáciu s dodávateľmi. Kreatívny asistent na nápady a koncepty eventov. Zdieľanie s kolegom."}, {"n": 4, "status": "pending", "title": "Asistenti pre tím eventu", "date": "piatok 20. 11. 2026", "duration": "3 hodiny", "teaser": "Asistenti pre ľudí, ktorí pripravujú event: produkcia, dodávatelia, scenár a podklady pre moderátora, report po evente."}, {"n": 5, "status": "pending", "title": "Aplikácia pre hostí", "date": "piatok 27. 11. 2026", "duration": "3 hodiny", "teaser": "Tvorba webovej aplikácie s AI bez programovania. Program, miesto, FAQ, registrácia, chatbot, anketa a spätná väzba. Plán, ako ju dotiahnuť do februára."}]}</script>
+<script>
+(function(){
+const D = JSON.parse(document.getElementById('data').textContent);
+const MODE = D.mode, TOTAL = D.meta.total;
+const view = document.getElementById('view'), tabs = document.getElementById('tabs');
+const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const nb = s => esc(s).replace(/(?<=^|[\s(„])([aiouvkszAIOUVKSZ]) /g, '$1 ');
+const K = 'kora-' + MODE + '-';
+const store = {
+  get(k){ try{ return localStorage.getItem(K+k) }catch(e){ return null } },
+  set(k,v){ try{ localStorage.setItem(K+k,v) }catch(e){} }
+};
+
+function bar(m){ return `<span class="bar"><i style="width:${Math.round(m/25*100)}%"></i></span>` }
+function checklist(items,key){
+  return `<ul class="check">${items.map((x,i)=>{
+    const m = /^(.*?:)\s*_+\s*$/.exec(x);
+    if(m) return `<li><label><input type="checkbox" id="${key}-${i}" data-check="${key}-${i}" data-other="${key}-${i}-t"><span class="other"><span>${nb(m[1])}</span><input type="text" id="${key}-${i}-t" data-key="${key}-${i}-t" data-label="${esc(m[1])}" placeholder="doplňte" aria-label="${esc(m[1])}"></span></label></li>`;
+    return `<li><label><input type="checkbox" id="${key}-${i}" data-check="${key}-${i}"><span>${nb(x)}</span></label></li>`;
+  }).join('')}</ul>`;
+}
+function fill(label,lines,key){
+  return `<div class="fill"><label for="${key}">${nb(label)}</label><textarea id="${key}" data-key="${key}" data-label="${esc(label)}" rows="${Math.max(2,lines+1)}" placeholder="Sem si píšte poznámky"></textarea></div>`;
+}
+function promptHTML(label,text,key){
+  const body = esc(text).replace(/\[[^\]]+\]/g, m => `<mark>${m}</mark>`);
+  return `<figure class="prompt"><figcaption><span>${nb(label)}</span><button type="button" class="copy" data-copy="${key}">Kopírovať</button></figcaption><pre id="${key}">${body}</pre></figure>`;
+}
+function tableHTML(t,key){
+  const head = `<tr>${t.head.map(h=>`<th>${nb(h)}</th>`).join('')}</tr>`;
+  const rows = t.rows.map((r,ri)=>`<tr>${r.map((c,ci)=> c==='' && ci>0
+      ? `<td><textarea id="${key}-c${ri}" data-key="${key}-c${ri}" data-label="${esc(r[0])}" rows="2" aria-label="${esc(t.head[ci])}: ${esc(r[0])}"></textarea></td>`
+      : `<td>${nb(c)}</td>`).join('')}</tr>`).join('');
+  return `<div class="tbl"><table><thead>${head}</thead><tbody>${rows}</tbody></table></div>`;
+}
+function hero(s, eyebrow){
+  return `<p class="eyebrow">${eyebrow}</p><h1>${nb(s.title)}</h1>
+    <div class="meta"><span><b>Termín:</b> ${esc(s.date)}</span><span><b>Rozsah:</b> ${esc(s.duration)}</span>${s.place?`<span><b>Forma:</b> ${nb(s.place)}</span>`:''}</div>`;
+}
+function pending(s){
+  const txt = MODE==='lektor' ? 'Scenár doplníme podľa tempa po predchádzajúcom sedení.' : 'Pracovný list doplníme pred sedením.';
+  return hero(s, `Sedenie ${s.n} z ${TOTAL} · pripravujeme`) +
+    `<div class="pending"><p class="lab">Čo nás čaká</p><p>${nb(s.teaser)}</p><p class="small" style="margin:0">${txt}</p></div>`;
+}
+
+/* ---------- úvod / všeobecné sekcie ---------- */
+function sec(x,key){
+  let h = `<section class="task" id="${key}"><header>${x.eb?`<p class="eyebrow">${nb(x.eb)}</p>`:''}<h2>${nb(x.title)}</h2></header>`;
+  if(x.text) h += `<p class="why">${nb(x.text)}</p>`;
+  if(x.bullets) h += `<ul>${x.bullets.map(b=>`<li>${nb(b)}</li>`).join('')}</ul>`;
+  if(x.ordered) h += `<ol class="steps">${x.ordered.map(b=>`<li>${nb(b)}</li>`).join('')}</ol>`;
+  if(x.cols) h += `<div class="cols">${x.cols.map(c=>`<div class="card"><h4>${nb(c.title)}</h4><ul>${c.items.map(i=>`<li>${nb(i)}</li>`).join('')}</ul></div>`).join('')}</div>`;
+  if(x.table) h += tableHTML(x.table, key);
+  if(x.prompts) h += `<div class="prompts">${x.prompts.map((p,i)=>promptHTML(p[0],p[1],`${key}-p${i}`)).join('')}</div>`;
+  if(x.note) h += `<p class="tip"><b>Pozor</b>${nb(x.note)}</p>`;
+  if(x.tip) h += `<p class="tip"><b>Pre vás</b>${nb(x.tip)}</p>`;
+  if(x.text_after) h += `<p style="margin-top:12px">${nb(x.text_after)}</p>`;
+  if(x.check) h += checklist(x.check, `${key}-ch`);
+  if(x.fills) h += x.fills.map((f,i)=>fill(f[0],f[1],`${key}-f${i}`)).join('');
+  if(x.src) h += `<p class="src">Zdroj: ${nb(x.src)}</p>`;
+  return h + `</section>`;
+}
+function introHero(s, eyebrow){
+  return `<p class="eyebrow">${eyebrow}</p><h1>${nb(s.title)}</h1>
+    <div class="meta"><span><b>Kedy:</b> ${esc(s.date)}</span><span><b>Rozsah:</b> ${esc(s.duration)}</span></div>`;
+}
+function introClient(s){
+  let h = introHero(s, 'Úvod · ChatGPT Business pre KORA Events') + `<p class="why" style="font-size:16px">${nb(s.lead)}</p>`;
+  h += `<ul class="how"><li>Polia na vyplnenie si vyplňte ešte pred sedením 1.</li><li>Vzor zadania na konci si môžete skopírovať.</li></ul>`;
+  s.sections.forEach((x,i)=> h += sec(x, `s0-x${i}`));
+  h += `<section class="end"><h2 style="margin-bottom:8px">Zdroje</h2><ul class="srcs">${s.sources.map(r=>`<li><a href="${esc(r[1])}" target="_blank" rel="noopener">${nb(r[0])}</a></li>`).join('')}</ul><p class="small" style="margin-top:8px">${nb(s.sources_note)}</p>
+        <div class="next"><span>Ďalej: <b>Sedenie 1 · Porozumenie ChatGPT</b></span><a class="ghost" href="#sedenie-1" style="text-decoration:none">Otvoriť sedenie 1</a></div></section>`;
+  return h;
+}
+function introLektor(s){
+  let h = introHero(s, 'Úvod · lektorské poznámky');
+  s.lektor.sections.forEach((x,i)=> h += sec(x, `s0-l${i}`));
+  return h;
+}
+
+/* ---------- pracovný list ---------- */
+function task(s,t){
+  const id = `s${s.n}-t${t.id}`;
+  let h = `<section class="task" id="${id}"><header><p class="eyebrow">Úloha ${esc(t.id)}</p><h2>${nb(t.title)}</h2></header><p class="why">${nb(t.why)}</p>`;
+  if(t.facts) h += `<h3>Čo vedieť</h3><ul>${t.facts.map(x=>`<li>${nb(x)}</li>`).join('')}</ul>`;
+  if(t.table) h += tableHTML(t.table, id);
+  if(t.steps) h += `<h3>Postup</h3><ol class="steps">${t.steps.map(x=>`<li>${nb(x)}</li>`).join('')}</ol>`;
+  if(t.prompts) h += `<div class="prompts">${t.prompts.map((p,i)=>promptHTML(p[0],p[1],`${id}-p${i}`)).join('')}</div>`;
+  if(t.list) h += `<h3>${nb(t.list_title)}</h3><ol class="rules">${t.list.map(x=>`<li>${nb(x)}</li>`).join('')}</ol>`;
+  if(t.tip) h += `<p class="tip"><b>Tip</b>${nb(t.tip)}</p>`;
+  if(t.choice) h += `<h3>${nb(t.choice.title)}</h3><ol class="choice">${t.choice.items.map((it,i)=>`<li><span>${nb(it)}</span><span class="opts">${t.choice.options.map(o=>`<label><input type="radio" name="${id}-q${i}" value="${esc(o)}" data-radio="${id}-q${i}">${esc(o)}</label>`).join('')}</span></li>`).join('')}</ol>`;
+  if(t.fills) h += t.fills.map((f,i)=>fill(f[0],f[1],`${id}-f${i}`)).join('');
+  if(t.checks) h += `<h3>${nb(t.checks.title)}</h3>` + checklist(t.checks.items, `${id}-ch`);
+  return h + `</section>`;
+}
+function client(s){
+  if(s.type==='intro') return introClient(s);
+  if(s.status !== 'ready') return pending(s);
+  let h = hero(s, `Sedenie ${s.n} z ${TOTAL} · pracovný list`);
+  h += `<section class="overview"><div class="card tint"><p class="lab">Cieľ sedenia</p><p>${nb(s.goal)}</p></div>
+        <div class="card"><p class="lab">Čo budete mať na konci</p>${checklist(s.outputs, `s${s.n}-out`)}</div></section>`;
+  h += `<ul class="how">${s.how.map(x=>`<li>${nb(x)}</li>`).join('')}</ul>`;
+  if(s.info) h += `<div class="info"><h2>${nb(s.info.title)}</h2><p style="margin:0">${nb(s.info.text)}</p></div>`;
+  s.tasks.forEach(t => h += task(s,t));
+  if(s.others) h += `<section class="task"><header><p class="eyebrow">Na okraj</p><h2>${nb(s.others.title.replace(/^Na okraj: /,''))}</h2></header><p class="why">${nb(s.others.text)}</p>${tableHTML({head:['Nástroj','Kedy by dával zmysel'],rows:s.others.rows}, `s${s.n}-oth`)}</section>`;
+  h += `<section class="end"><p class="eyebrow">Do ďalšieho sedenia</p><h2>Domáca úloha</h2><p class="small">Časová náročnosť ${esc(s.homework_time)}</p>${checklist(s.homework, `s${s.n}-hw`)}
+        ${fill('Moje otázky na ďalšie sedenie:', 3, `s${s.n}-q`)}
+        <div class="next"><span>Ďalej: <b>${nb(s.next)}</b></span><button type="button" class="ghost" data-notes="${s.n}">Kopírovať moje poznámky</button></div>
+        <textarea class="notes-out" id="notes-out-${s.n}" rows="8" readonly hidden></textarea>
+        <p class="small" style="margin-top:10px">Poznámky a zaškrtnutia sa ukladajú len v tomto prehliadači. Dôležité veci si skopírujte do vlastného dokumentu.</p></section>`;
+  return h;
+}
+
+/* ---------- lektorský scenár ---------- */
+function lektor(s){
+  if(s.type==='intro') return introLektor(s);
+  if(s.status !== 'ready' || !s.lektor) return pending(s);
+  const L = s.lektor, k = `s${s.n}`;
+  let h = hero(s, `Sedenie ${s.n} z ${TOTAL} · lektorský scenár`);
+  h += `<section class="overview"><div class="card tint"><p class="lab">Cieľ sedenia</p><p>${nb(s.goal)}</p></div>
+        <div class="card"><p class="lab">Výstupy pre klientku</p><ul>${s.outputs.map(x=>`<li>${nb(x)}</li>`).join('')}</ul></div></section>`;
+  const total = L.blocks.reduce((a,b)=>a+b.min,0);
+  h += `<h2 style="margin:28px 0 4px">Časový plán</h2><div class="tbl"><table class="agenda"><thead><tr><th>Čas</th><th>Min</th><th>Blok</th><th>Pracovný list</th></tr></thead><tbody>
+        ${L.blocks.map(b=>`<tr${b.pause?' class="pause"':''}><td class="tm">${esc(b.time)}</td><td class="mn">${b.min}${bar(b.min)}</td><td class="bl">${b.pause?'':esc(b.n)+' '}${nb(b.t)}</td><td>${b.pl?nb(b.pl):''}</td></tr>`).join('')}
+        </tbody><tfoot><tr><td></td><td>${total}</td><td colspan="2">Spolu ${Math.round(total/60)} hodiny vrátane prestávky</td></tr></tfoot></table></div>`;
+  h += `<h2 style="margin:28px 0 8px">Príprava pred sedením</h2>` + checklist(L.prep, `${k}-prep`);
+  L.blocks.filter(b=>!b.pause).forEach(b=>{
+    h += `<article class="blk"><header><span class="bn">${esc(b.n)}</span><h2>${nb(b.t)}</h2><span class="bt">${esc(b.time)} · ${b.min} min</span>${b.pl?`<span class="chip">Pracovný list: ${nb(b.pl)}</span>`:''}</header>
+      <blockquote><small>Kľúčová veta</small>„${nb(b.key)}“</blockquote>
+      <h3>Postup</h3><ol class="steps">${b.steps.map(x=>`<li>${nb(x)}</li>`).join('')}</ol>
+      ${b.qa && b.qa.length ? `<h3>Otázky, ktoré môžu prísť</h3><dl>${b.qa.map(q=>`<dt>${nb(q[0])}</dt><dd>${nb(q[1])}</dd>`).join('')}</dl>`:''}
+      ${b.short ? `<p class="short"><b>Ak nestíhaš:</b> ${nb(b.short)}</p>`:''}</article>`;
+  });
+  h += `<section class="end"><h2 style="margin-bottom:8px">Na čo dať pozor</h2><div class="tbl"><table class="risk"><tbody>${L.risks.map(r=>`<tr><td>${nb(r[0])}</td><td>${nb(r[1])}</td></tr>`).join('')}</tbody></table></div>
+        <h2 style="margin:24px 0 8px">Po sedení</h2>${checklist(L.after, `${k}-after`)}
+        ${fill('Moje poznámky k tempu a úpravám pre ďalšie sedenia:', 4, `${k}-notes`)}</section>`;
+  return h;
+}
+
+/* ---------- navigácia a stav ---------- */
+function bind(){
+  view.querySelectorAll('[data-key]').forEach(el=>{
+    const v = store.get(el.dataset.key); if(v !== null) el.value = v;
+    el.addEventListener('input', ()=>{
+      store.set(el.dataset.key, el.value);
+      const cb = view.querySelector(`[data-other="${el.dataset.key}"]`);
+      if(cb && el.value.trim() && !cb.checked){ cb.checked = true; store.set(cb.dataset.check,'1'); }
+    });
+  });
+  view.querySelectorAll('[data-check]').forEach(el=>{
+    el.checked = store.get(el.dataset.check) === '1';
+    el.addEventListener('change', ()=>store.set(el.dataset.check, el.checked?'1':'0'));
+  });
+  view.querySelectorAll('[data-radio]').forEach(el=>{
+    el.checked = store.get(el.dataset.radio) === el.value;
+    el.addEventListener('change', ()=>{ if(el.checked) store.set(el.dataset.radio, el.value) });
+  });
+}
+async function copyText(text, btn, fallbackEl, okLabel){
+  const orig = btn.textContent;
+  try{ await navigator.clipboard.writeText(text); btn.textContent = okLabel || 'Skopírované'; btn.classList.add('done'); }
+  catch(e){
+    if(fallbackEl){
+      if(fallbackEl.tagName === 'TEXTAREA'){ fallbackEl.hidden = false; fallbackEl.value = text; fallbackEl.select(); }
+      else { const r = document.createRange(); r.selectNodeContents(fallbackEl); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); }
+    }
+    btn.textContent = 'Označené, stlačte Ctrl+C';
+  }
+  setTimeout(()=>{ btn.textContent = orig; btn.classList.remove('done') }, 1800);
+}
+view.addEventListener('click', e=>{
+  const c = e.target.closest('[data-copy]');
+  if(c){ const pre = document.getElementById(c.dataset.copy); copyText(pre.textContent, c, pre); return; }
+  const n = e.target.closest('[data-notes]');
+  if(n){
+    const parts = [];
+    view.querySelectorAll('textarea[data-key], input[type=text][data-key]').forEach(t=>{ if(t.value.trim()) parts.push(t.dataset.label + '\n' + t.value.trim()); });
+    const text = parts.length ? parts.join('\n\n') : 'Zatiaľ žiadne poznámky.';
+    copyText(text, n, document.getElementById('notes-out-' + n.dataset.notes), 'Poznámky skopírované');
+  }
+});
+function route(){
+  const m = /^#sedenie-(\d)$/.exec(location.hash);
+  let n = m ? +m[1] : (location.hash==='#uvod' ? 0 : (MODE==='client' ? 0 : 1));
+  const s = D.sessions.find(x=>x.n===n) || D.sessions[0];
+  tabs.innerHTML = D.sessions.map(x=> x.type==='intro'
+    ? `<a href="#uvod" class="${x.n===s.n?'on':''}" ${x.n===s.n?'aria-current="page"':''}><b>Úvod</b><span>ChatGPT Business</span></a>`
+    : `<a href="#sedenie-${x.n}" class="${x.n===s.n?'on':''} ${x.status!=='ready'?'pend':''}" ${x.n===s.n?'aria-current="page"':''}><b>Sedenie ${x.n}</b><span>${esc(x.title.length>26?x.title.slice(0,24)+'…':x.title)}</span></a>`).join('');
+  view.innerHTML = MODE==='lektor' ? lektor(s) : client(s);
+  bind();
+}
+window.addEventListener('hashchange', ()=>{ route(); window.scrollTo(0,0); });
+route();
+})();
+</script>
+
+</body></html>
