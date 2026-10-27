@@ -180,7 +180,7 @@ const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>
 const nb = s => esc(s).replace(/(?<=^|[\s(„])([aiouvkszAIOUVKSZ]) /g, '$1 ');
 const K = 'kora-' + MODE + '-';
 /* Adresa Google Apps Script, ktorý pošle poznámky e-mailom Rasťovi. Prázdne = len kopírovanie. */
-const NOTES_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwEN-33emo127mAUrSSmmtuhCECe4qq_JTzXezvaiHcUsk5ZEiodo0kCl1P-3RXuNza/exec';
+const NOTES_ENDPOINT = '';
 const store = {
   get(k){ try{ return localStorage.getItem(K+k) }catch(e){ return null } },
   set(k,v){ try{ localStorage.setItem(K+k,v) }catch(e){} },
@@ -272,8 +272,8 @@ function task(s,t){
 }
 function notesBlock(n){
   return `<div class="notes-box"><h2>Uložte si poznámky</h2>
-    <p>Tlačidlo pošle vaše poznámky Rasťovi a zároveň ich skopíruje. Potom ich vložte (Ctrl + V) do vlastného dokumentu. Po odoslaní sa poznámky z tejto stránky vymažú.</p>
-    <button type="button" class="copy big" data-notes="${n}">Odoslať a skopírovať poznámky</button>
+    <p>Tlačidlo skopíruje všetky vaše poznámky. Vložte si ich (Ctrl + V) do vlastného dokumentu. Ak chcete, pošlite ich Rasťovi e-mailom. Po skopírovaní sa poznámky z tejto stránky vymažú.</p>
+    <button type="button" class="copy big" data-notes="${n}">Skopírovať poznámky</button>
     <p class="notes-msg" id="notes-msg-${n}" role="status"></p>
     <textarea class="notes-out" id="notes-out-${n}" rows="8" readonly hidden></textarea></div>`;
 }
